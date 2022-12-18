@@ -9,7 +9,7 @@ void ler_texto(char *buffer, int length) {
      fgets(buffer, length, stdin);
      strtok(buffer, "\n");
 }
-int Test()
+int main2()
 {
      double salario1, salario2;
      char nome1[50], nome2[50];

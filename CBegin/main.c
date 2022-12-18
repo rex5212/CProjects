@@ -6,8 +6,8 @@ void clearInput() {
      while ((c = getchar()) != '\n' && c != EOF) {}
 }
 void readText(char *buffer, int length) {
- fgets(buffer, length, stdin);
- strtok(buffer, "\n");
+     fgets(buffer, length, stdin);
+     strtok(buffer, "\n");
 }
 
 int main()
@@ -29,17 +29,15 @@ int main()
     char Char;
     char String[50];
 
+    printf("Escreva um texto: ");
+    readText(String, 50);
+
     printf("Escreva um nunero: ");
     scanf("%i", &Int);
 
     printf("Escreva um numero flutuante: ");
     scanf("%lf", &Double);
 
-    printf("Escreva um texto: ");
-    clearInput();
-    readText(String, 50);
-
-    // Ta pedindo um  caractere diversas vezes (arrumar)
     printf("Escreva um caracte: ");
     clearInput();
     scanf("%c", &Char);
