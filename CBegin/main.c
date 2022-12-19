@@ -13,6 +13,7 @@ void readText(char *buffer, int length) {
 int main()
 {
     /*
+       !!! Debug esta com erro na inicialização é necessario da o break point e ir da step into se não ele n ira reconhece o break
        int - %d || %i (32 bits),
        long int - %li (32 bits),
        long long int - %lli (64 bits),
@@ -20,8 +21,11 @@ int main()
        double - %lf  (precisão dupla),
        char - %c (caractere),
        char[] - %s (string),
-       scanf = input, coloca o placeholder respectivo a o tipo de variavel digitada,
-       fgets,
+       scanf = input, coloca o placeholder respectivo a o nome da variavel digitada,
+       fgets = input so que para string, utiliza o fgets pasando o nome da variavel, e tamanho e a biblioteca
+       strtok lê a variavel ate certo parameto, no caso foi ate a quebra de linha
+       &variavel = ao endereço de espaço que essa varivel esta
+       ?fseek = tambem faz a limpeza do input mas de maneira diferente (apender)?
     */
 
     int Int;
@@ -48,12 +52,37 @@ int main()
     printf("%c\n", Char);
     printf("%s\n", String);
 
-    int w, z;
-    double resultado;
-    w = 5;
-    z = 2;
-    resultado = (double) w / z;
-    printf("O Resultado da divisao e: %.2lf\n", resultado);
+    int vetor[3];
+    vetor[0] = 2;
+    vetor[1] = 4;
+    vetor[2] = 6;
+
+    for (int i = 0; i < 3; i++){
+        printf("%i", vetor[i]);
+    }
+
+    printf("\n");
+
+    int C = 3;
+    int L = 3;
+    int matriz[C][L];
+    printf("Vamos faze uma caluna de 3x3: \n");
+
+    for (int i = 0; i < L; i++){
+        for (int j = 0; j < C; j++){
+            printf("Valor do Elemento [%i][%i]: ", i, j);
+            scanf("%d", &matriz[i][j]);
+        }
+        printf("\n");
+    }
+
+
+    for (int i = 0; i < L; i++){
+        for (int j = 0; j < C; j++){
+            printf("%i", matriz[i][j]);
+        }
+        printf("\n");
+    }
 
  return 0;
 }
