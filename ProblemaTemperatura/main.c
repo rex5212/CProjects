@@ -3,6 +3,7 @@
 
 // fazer o problema temperatura base adicionando que pode se nos tipos K, C, F e tambem se e do corpo humano ou ambiente
 // termina
+// fazer aceita caractere minusculo e maiusculo
 
 void clearInput() {
      char c;
