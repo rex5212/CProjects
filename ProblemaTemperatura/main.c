@@ -25,7 +25,7 @@ int main()
     printf("Se deseja sabe a condição do corpo humano pelo temperatura digite h,\nSe quiser sabe do ambiente digite ambiente: ");
     scanf("%c", &opcao);
     if(opcao == 'h'){
-        printf("Qual e o metodo de medição que esta sendo utilizado (pode ser C para celsius, F para fahenrait ou K para kleter): ");
+        printf("Qual e o metodo de medição que esta sendo utilizado (pode ser C para celsius, F para fahrenheit ou K para kelvin): ");
         clearInput();
         scanf("%c", &metodo);
         if (metodo == 'F'){
@@ -38,7 +38,7 @@ int main()
             } else if (c < 36.5 && c > 34.5){
                 printf("Temperatura corporal baixa de %.2lf° Kelvin, %.2lf° Celsius e %.2lf° Fahrenheit", f, kelvin, celsius);
             } else if(c > 55 || c < 30){
-                printf("Infelizmente vou ta ferrado com temperatura registada de %.2lf° Kelvin, %.2lf° Celsius e %.2lf° Fahrenheit", f, kelvin, celsius);
+                printf("Infelizmente voce ta ferrado com temperatura registada de %.2lf° Kelvin, %.2lf° Celsius e %.2lf° Fahrenheit", f, kelvin, celsius);
             }
         } else if (metodo == 'C'){
             printf("Quantos Graus Celsius está: ");
@@ -50,7 +50,7 @@ int main()
             } else if (c < 36.5 && c > 34.5){
                 printf("Temperatura corporal baixa de %.2lf° Celsius, %.2lf° Fahrenheit e %.2lf° Kelvin", c, fahrenheit, kelvin);
             } else if(c > 55 || c < 30){
-                printf("Infelizmente vou ta ferrado com temperatura registada de %.2lf° Celsius, %.2lf° Fahrenheit e %.2lf° Kelvin", c, fahrenheit, kelvin);
+                printf("Infelizmente voce ta ferrado com temperatura registada de %.2lf° Celsius, %.2lf° Fahrenheit e %.2lf° Kelvin", c, fahrenheit, kelvin);
             }
         } else if (metodo == 'K'){
             printf("Quantos Graus Kelvin está: ");
@@ -62,7 +62,7 @@ int main()
             } else if (c < 36.5 && c > 34.5){
                 printf("Temperatura corporal baixa de %.2lf° Kelvin, %.2lf° Fahrenheit e %.2lf° Celsius", k, fahrenheit, celsius);
             } else if(c > 55 || c < 30){
-                printf("Infelizmente vou ta ferrado com temperatura registada de %.2lf° Kelvin, %.2lf° Fahrenheit e %.2lf° Celsius", k, fahrenheit, celsius);
+                printf("Infelizmente voce ta ferrado com temperatura registada de %.2lf° Kelvin, %.2lf° Fahrenheit e %.2lf° Celsius", k, fahrenheit, celsius);
             }
         }
     } else if(opcao == "ambiente"){
